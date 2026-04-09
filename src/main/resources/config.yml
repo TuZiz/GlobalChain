@@ -1,0 +1,37 @@
+server-id: "node-a"
+language: "zh_cn"
+
+currency:
+  scale: 2
+  name: "系统余额"
+  symbol: "￥"
+
+storage:
+  mode: "yaml"
+  yaml:
+    file: "storage/local-market.yml"
+  mysql:
+    jdbc-url: "jdbc:mysql://127.0.0.1:3306/globalchain?useSSL=false&characterEncoding=utf8&serverTimezone=UTC"
+    username: "root"
+    password: "change-me"
+    driver-class-name: "com.mysql.cj.jdbc.Driver"
+    pool:
+      maximum-pool-size: 16
+      minimum-idle: 4
+      connection-timeout-ms: 10000
+      leak-detection-threshold-ms: 0
+
+market:
+  browse-page-size: 27
+  max-listings-per-player: 32
+  max-price: "1000000000.00"
+  sale-fee-rate: "0.00"
+  command-id-prefix-min-length: 8
+  recovery-check-interval-seconds: 30
+  listing-expire-seconds: 259200
+
+performance:
+  io-threads: 8
+
+debug:
+  compatibility-mode: false

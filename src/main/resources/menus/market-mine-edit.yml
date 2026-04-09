@@ -1,0 +1,118 @@
+Title: "<gradient:#FACC15:#FB7185><bold>✦ 编辑我的商品 ✦</bold></gradient>"
+
+# 💡 布局逻辑：
+# 贯彻静态页规范：L(返回) DL corner, C(关闭) DR corner。
+# 增加视觉呼吸空间，将原本全部拥挤在一起的功能按键按照逻辑重新排列。
+# V(商品本体) 上方加入信息按键组，下方加入操作按键组。
+Shape:
+  - "GMB#I#FT#" # 顶部装饰/导航/工具组（与主界面对齐）
+  - "####V####" # 商品本体单独占一行居中
+  - "###P#U###" # 操作按键居中排列在商品正下方
+  - "#########" # 增加一行背景呼吸空间
+  - "L#######C" # 底部导航（左下返回、右下关闭）
+
+BUTTONS:
+  # ==================================
+  # 💡 将背景板升级为无名灰色玻璃，让彩色按钮亮眼，防止鼠标误触显示原版名称
+  # ==================================
+  "#":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  # ==================================
+  # 💡 顶部导航/工具装饰（非核心，但保持与主页对齐）
+  # ==================================
+  "G":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+  "M":
+    mats: CHEST
+    glow: true
+    name: "<gradient:#FACC15:#FB7185><bold>✦ 我的在售 ✦</bold></gradient>"
+  "B":
+    mats: ENDER_CHEST
+    name: "<gradient:#C084FC:#F9A8D4><bold>✦ 待领取箱 ✦</bold></gradient>"
+
+  "F":
+    mats: NAME_TAG
+    name: "<gradient:#38BDF8:#A5F3FC><bold>✦ 搜索物品 ✦</bold></gradient>"
+  "T":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  # ==================================
+  # 底部导航
+  # ==================================
+  "L":
+    mats: ARROW
+    name: "<gradient:#67E8F9:#A5F3FC><bold>« 返回主市场</bold></gradient>"
+    lore:
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>返回全球市场主页</#F8FAFC>"
+    click:
+      - "menu: market-global"
+
+  "C":
+    mats: OAK_DOOR
+    name: "<gradient:#94A3B8:#CBD5E1><bold>✦ 关闭界面 ✦</bold></gradient>"
+    click:
+      - "close"
+
+  # ==================================
+  # 信息组：将原本拥挤的功能语义化，将原本的信息I和时间T合并进商品本身的Lore中，让玩家不需要移动鼠标就能看到所有信息。
+  # ==================================
+  "I":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  # ==================================
+  # 正中央：商品本体（💡 美化核心：Lore 层级美化）
+  # ==================================
+  "V":
+    dynamic-role: "selected-listing"
+    lore:
+      - ""
+      - " <#38BDF8>▍ </#38BDF8><#F8FAFC><bold>商品参数</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品类型：<#A5F3FC><type></#A5F3FC></#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品数量：<#86EFAC><amount></#86EFAC> <#94A3B8>个</#94A3B8>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品编号：<#67E8F9><id></#67E8F9></#E2E8F0>"
+      - ""
+      - " <#FACC15>▍ </#FACC15><#F8FAFC><bold>财务详情</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>当前售价：<#FACC15><price> <symbol></#FACC15>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>单件零售：<#FACC15><retailprice> <symbol></#FACC15>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>支付方式：<#E2E8F0><currency></#E2E8F0>"
+      - ""
+      - " <#C084FC>▍ </#C084FC><#F8FAFC><bold>时间追踪</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>上市时间：<#CBD5E1><uploadTime></#CBD5E1></#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>到期时间：<#F87171><expireTime></#F87171></#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>剩余时间：<#F472B6><expireTimeLeft></#F472B6></#E2E8F0>"
+      - ""
+      - " <#4ADE80>▶</#4ADE80> <#F8FAFC>请通过下方按钮操作该商品</#F8FAFC>"
+
+  # ==================================
+  # 操作组：核心交互按钮（居中）
+  # ==================================
+  "P":
+    mats: EMERALD
+    glow: true
+    name: "<gradient:#43E97B:#38F9D7><bold>✦ 修改售价 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#4ADE80>▍ </#4ADE80><#F8FAFC><bold>调价操作</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>当前售价：<#FACC15><price> <symbol></#FACC15></#E2E8F0>"
+      - ""
+      - " <#4ADE80>▶</#4ADE80> <#F8FAFC>点击输入新的售价</#F8FAFC>"
+    click:
+      - "internal: prompt_edit_price"
+
+  "U":
+    mats: REDSTONE
+    name: "<gradient:#FB7185:#F43F5E><bold>✦ 下架商品 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#FB7185>▍ </#FB7185><#F8FAFC><bold>撤回操作</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>下架后物品会直接进入待领取箱</#E2E8F0>"
+      - ""
+      - " <#FB7185>▶</#FB7185> <#F8FAFC>点击确认下架</#F8FAFC>"
+    click:
+      - "internal: cancel_selected"

@@ -1,0 +1,144 @@
+prefix: "<gradient:#00D4FF:#00FFA3>GlobalChain</gradient> <#94A3B8>|</#94A3B8> "
+
+messages:
+  booting: "<prefix><#FACC15>插件仍在异步启动，请稍后再试。</#FACC15>"
+  player-only: "<prefix><#FB7185>该子命令只能由玩家执行。</#FB7185>"
+  no-permission: "<prefix><#FB7185>你没有权限执行此操作。</#FB7185>"
+  internal-error: "<prefix><#FB7185>内部处理失败，请查看后台日志。</#FB7185>"
+  economy-operation-failed: "<prefix><#FB7185>Vault 经济系统操作失败，请稍后重试。</#FB7185>"
+  invalid-number: "<prefix><#FB7185>数字格式不正确。</#FB7185>"
+  invalid-page: "<prefix><#FB7185>页码必须大于等于 1。</#FB7185>"
+  invalid-price: "<prefix><#FB7185>价格格式不正确，最多保留 <scale> 位小数。</#FB7185>"
+  price-too-high: "<prefix><#FB7185>价格超过配置上限。</#FB7185>"
+  holding-empty: "<prefix><#FB7185>请把要出售的物品拿在主手。</#FB7185>"
+  tracked-item-locked: "<prefix><#F97316>该物品正在事务处理中，暂时禁止移动或使用。</#F97316>"
+  too-many-listings: "<prefix><#FB7185>你的在售数量已达上限：<#FACC15><limit></#FACC15>。</#FB7185>"
+  sale-success: "<prefix><#4ADE80>已上架：</#4ADE80><#F8FAFC><item></#F8FAFC> <#94A3B8>x</#94A3B8><#F8FAFC><amount></#F8FAFC> <#94A3B8>售价</#94A3B8> <#FACC15><price></#FACC15> <#94A3B8>ID</#94A3B8> <#67E8F9><id></#67E8F9>"
+  sale-failed: "<prefix><#FB7185>上架失败，物品已回滚或进入补偿流程。</#FB7185>"
+  sale-recovered: "<prefix><#FACC15>检测到未完成的上架事务，物品已转入待领取箱。</#FACC15>"
+  balance: "<prefix><#4ADE80>当前余额：</#4ADE80><#FACC15><balance></#FACC15>"
+  grant-success: "<prefix><#4ADE80>已通过 Vault 为 <#F8FAFC><target></#F8FAFC> 增加余额 <#FACC15><amount></#FACC15>。</#4ADE80>"
+  browse-empty: "<prefix><#94A3B8>当前没有符合条件的在售物品。</#94A3B8>"
+  buy-success: "<prefix><#4ADE80>购买成功：</#4ADE80><#F8FAFC><item></#F8FAFC> <#94A3B8>x</#94A3B8><#F8FAFC><amount></#F8FAFC> <#94A3B8>花费</#94A3B8> <#FACC15><price></#FACC15> <#94A3B8>已进入待领取箱。</#94A3B8>"
+  buy-self: "<prefix><#FB7185>不能购买自己上架的物品。</#FB7185>"
+  insufficient-funds: "<prefix><#FB7185>余额不足，需要 <#FACC15><price></#FACC15>。</#FB7185>"
+  listing-not-found: "<prefix><#FB7185>未找到对应的上架单。</#FB7185>"
+  listing-expired: "<prefix><#F97316>该商品已到期，系统已自动退回卖家的待领取箱。</#F97316>"
+  listing-id-ambiguous: "<prefix><#FB7185>ID 前缀匹配到多个上架单，请输入更长的 ID。</#FB7185>"
+  cancel-success: "<prefix><#4ADE80>已下架：</#4ADE80><#F8FAFC><item></#F8FAFC> <#94A3B8>x</#94A3B8><#F8FAFC><amount></#F8FAFC> <#94A3B8>已进入待领取箱。</#94A3B8>"
+  reprice-success: "<prefix><#4ADE80>已改价：</#4ADE80><#F8FAFC><item></#F8FAFC> <#94A3B8>x</#94A3B8><#F8FAFC><amount></#F8FAFC> <#94A3B8>新售价</#94A3B8> <#FACC15><price></#FACC15>"
+  claim-empty: "<prefix><#94A3B8>待领取箱中没有可领取的物品。</#94A3B8>"
+  claim-success: "<prefix><#4ADE80>已领取：</#4ADE80><#F8FAFC><item></#F8FAFC> <#94A3B8>x</#94A3B8><#F8FAFC><amount></#F8FAFC>"
+  claim-no-space: "<prefix><#FB7185>背包空间不足，无法完成领取。</#FB7185>"
+  claim-id-ambiguous: "<prefix><#FB7185>待领取 ID 前缀匹配到多个记录，请输入更长的 ID。</#FB7185>"
+  search-prompt: "<prefix><#67E8F9>请在聊天栏输入搜索关键词，输入 cancel 取消。</#67E8F9>"
+  sell-prompt: "<prefix><#67E8F9>请在聊天栏输入售价，输入 cancel 取消。</#67E8F9>"
+  sell-confirm-price-prompt: "<prefix><#67E8F9>请在聊天栏输入本次上架售价，输入 cancel 取消。</#67E8F9>"
+  sell-confirm-price-set: "<prefix><#4ADE80>已设置上架价格：</#4ADE80><#FACC15><price></#FACC15>"
+  sell-confirm-price-required: "<prefix><#FB7185>请先在确认页设置售价，再提交上架。</#FB7185>"
+  sell-confirm-item-changed: "<prefix><#FB7185>主手物品已发生变化，请重新打开上架确认页后再提交。</#FB7185>"
+  edit-price-prompt: "<prefix><#67E8F9>请在聊天栏输入新的售价，当前价格为 <#FACC15><price></#FACC15>，输入 cancel 取消。</#67E8F9>"
+  prompt-cancelled: "<prefix><#94A3B8>已取消本次输入。</#94A3B8>"
+  search-updated: "<prefix><#4ADE80>已更新搜索条件：</#4ADE80><#F8FAFC><query></#F8FAFC>"
+  reload-started: "<prefix><#67E8F9>正在异步重载配置、语言和菜单，请稍候。</#67E8F9>"
+  reload-complete: "<prefix><#4ADE80>异步热重载完成，新的配置已经生效。</#4ADE80>"
+  reload-failed: "<prefix><#FB7185>热重载失败，已保留旧运行时。请查看后台日志。</#FB7185>"
+  reload-busy: "<prefix><#FACC15>已有一次引导或热重载正在进行，请稍后再试。</#FACC15>"
+  help:
+    - "<prefix><#67E8F9>/gmarket</#67E8F9> <#94A3B8>- 打开全球市场 GUI</#94A3B8>"
+    - "<prefix><#67E8F9>/gmarket mine</#67E8F9> <#94A3B8>- 打开我的在售 GUI</#94A3B8>"
+    - "<prefix><#67E8F9>/gmarket mailbox</#67E8F9> <#94A3B8>- 打开待领取箱 GUI</#94A3B8>"
+    - "<prefix><#67E8F9>/gmarket sell <price></#67E8F9> <#94A3B8>- 出售主手物品</#94A3B8>"
+    - "<prefix><#67E8F9>/gmarket balance</#67E8F9> <#94A3B8>- 查看余额</#94A3B8>"
+    - "<prefix><#67E8F9>/gmarket grant <player|uuid> <amount></#67E8F9> <#94A3B8>- 管理员通过 Vault 发放余额</#94A3B8>"
+    - "<prefix><#67E8F9>/gmarket reload</#67E8F9> <#94A3B8>- 异步热重载 config、lang、menus</#94A3B8>"
+
+ui:
+  empty-listings:
+    name: "<gradient:#FB7185:#F97316><bold>暂无符合条件的商品</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前关键词：<#F8FAFC><search></#F8FAFC></#E2E8F0>"
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前分类：<#F8FAFC><filter></#F8FAFC></#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>尝试修改搜索词或切换分类</#F8FAFC>"
+  empty-mailbox:
+    name: "<gradient:#67E8F9:#C084FC><bold>待领取箱为空</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>购买成功或下架返还的物品会出现在这里</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>当前没有待领取的物品</#F8FAFC>"
+
+gui:
+  titles:
+    loading: "全球市场 | 载入中"
+    market-global: "全球市场"
+    market-mine: "我的在售"
+    mailbox: "待领取箱"
+  filler: "<#0F172A>·</#0F172A>"
+  loading:
+    name: "<#94A3B8>载入中...</#94A3B8>"
+  buttons:
+    global: "<#67E8F9>全球市场</#67E8F9>"
+    mine: "<#FACC15>我的在售</#FACC15>"
+    mailbox: "<#C084FC>待领取箱</#C084FC>"
+    sell: "<#4ADE80>出售主手物品</#4ADE80>"
+    search: "<#38BDF8>搜索：<#F8FAFC><query></#F8FAFC></#38BDF8>"
+    reset: "<#FB7185>重置筛选</#FB7185>"
+    refresh: "<#F59E0B>刷新</#F59E0B>"
+    balance: "<#FACC15>余额：<#F8FAFC><balance></#F8FAFC></#FACC15>"
+    close: "<#94A3B8>关闭</#94A3B8>"
+    previous: "<#67E8F9>上一页</#67E8F9>"
+    next: "<#67E8F9>下一页</#67E8F9>"
+  status:
+    market: "<#E2E8F0>市场状态</#E2E8F0>"
+    mailbox: "<#E2E8F0>领取状态</#E2E8F0>"
+  listing:
+    market-lore:
+      - "<#94A3B8>卖家：</#94A3B8><#F8FAFC><seller></#F8FAFC>"
+      - "<#94A3B8>价格：</#94A3B8><#FACC15><price></#FACC15>"
+      - "<#94A3B8>ID：</#94A3B8><#67E8F9><id></#67E8F9>"
+      - "<#4ADE80>左键购买该物品</#4ADE80>"
+    mine-lore:
+      - "<#94A3B8>价格：</#94A3B8><#FACC15><price></#FACC15>"
+      - "<#94A3B8>ID：</#94A3B8><#67E8F9><id></#67E8F9>"
+      - "<#F97316>左键下架该物品</#F97316>"
+  mailbox:
+    entry-lore:
+      - "<#94A3B8>数量：</#94A3B8><#F8FAFC><amount></#F8FAFC>"
+      - "<#94A3B8>ID：</#94A3B8><#67E8F9><id></#67E8F9>"
+      - "<#4ADE80>左键领取到背包</#4ADE80>"
+  categories:
+    selected-lore:
+      - "<#4ADE80>当前已选中该分类</#4ADE80>"
+    normal-lore:
+      - "<#94A3B8>点击切换到该分类</#94A3B8>"
+    all:
+      name: "<#67E8F9>全部</#67E8F9>"
+      lore:
+        - "<#94A3B8>查看全部在售物品</#94A3B8>"
+    blocks:
+      name: "<#4ADE80>方块建材</#4ADE80>"
+      lore:
+        - "<#94A3B8>石头、木材、玻璃等建材</#94A3B8>"
+    combat:
+      name: "<#FB7185>战斗装备</#FB7185>"
+      lore:
+        - "<#94A3B8>武器、护甲、盾牌等</#94A3B8>"
+    tools:
+      name: "<#F59E0B>工具杂项</#F59E0B>"
+      lore:
+        - "<#94A3B8>镐、锹、桶、钓竿等</#94A3B8>"
+    food:
+      name: "<#FACC15>食物补给</#FACC15>"
+      lore:
+        - "<#94A3B8>各类食物与补给品</#94A3B8>"
+    redstone:
+      name: "<#EF4444>红石机械</#EF4444>"
+      lore:
+        - "<#94A3B8>红石、漏斗、观察者等</#94A3B8>"
+    rare:
+      name: "<#C084FC>稀有物资</#C084FC>"
+      lore:
+        - "<#94A3B8>鞘翅、下界之星、图腾等</#94A3B8>"

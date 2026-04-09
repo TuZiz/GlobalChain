@@ -1,0 +1,109 @@
+Title: "<gradient:#F59E0B:#FDE68A><bold>✦ 排序目录 ✦</bold></gradient>"
+
+Shape:
+  - "E#G#I#$M#"
+  - "#########"
+  - "#0#1#2#3#"
+  - "#########"
+  - "#########"
+  - "<#SBC####"
+
+BUTTONS:
+  "#":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  "E":
+    mats: SUNFLOWER
+    name: "<gradient:#FACC15:#FB923C><bold>✦ 刷新列表 ✦</bold></gradient>"
+    click:
+      - "internal: refresh"
+
+  "G":
+    mats: COMPASS
+    name: "<gradient:#67E8F9:#58A6FF><bold>✦ 全服市场 ✦</bold></gradient>"
+    click:
+      - "internal: open_global"
+
+  "M":
+    mats: CHEST
+    name: "<gradient:#FACC15:#FB7185><bold>✦ 我的在售 ✦</bold></gradient>"
+    click:
+      - "internal: open_mine"
+
+  "B":
+    mats: ENDER_CHEST
+    name: "<gradient:#C084FC:#F9A8D4><bold>✦ 待领取箱 ✦</bold></gradient>"
+    click:
+      - "internal: open_mailbox"
+
+  "$":
+    mats: GOLD_INGOT
+    name: "<gradient:#FACC15:#FDE68A><bold>✦ 钱包余额 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前余额：<#FDE047><balance></#FDE047></#E2E8F0>"
+
+  "I":
+    mats: WRITABLE_BOOK
+    name: "<gradient:#E2E8F0:#F8FAFC><bold>✦ 排序说明 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前排序：<#FACC15><sort></#FACC15></#E2E8F0>"
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>点击任意排序后会直接返回列表</#E2E8F0>"
+
+  "<":
+    mats: ARROW
+    name: "<gradient:#67E8F9:#A5F3FC><bold>« 返回列表</bold></gradient>"
+    click:
+      - "internal: back_to_source"
+
+  "S":
+    mats: EMERALD
+    glow: true
+    name: "<gradient:#43E97B:#38F9D7><bold>✦ 出售物品 ✦</bold></gradient>"
+    click:
+      - "internal: open_sell_confirm"
+
+  "C":
+    mats: OAK_DOOR
+    name: "<gradient:#94A3B8:#CBD5E1><bold>✦ 关闭界面 ✦</bold></gradient>"
+    click:
+      - "close"
+
+  "0":
+    mats: CLOCK
+    glow: true
+    name: "<gradient:#67E8F9:#A5F3FC><bold>最新上架</bold></gradient>"
+    lore:
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>按上架时间从新到旧排序</#F8FAFC>"
+    click:
+      - "internal: select_sort"
+
+  "1":
+    mats: GOLD_NUGGET
+    name: "<gradient:#4ADE80:#86EFAC><bold>价格最低</bold></gradient>"
+    lore:
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>按价格从低到高排序</#F8FAFC>"
+    click:
+      - "internal: select_sort"
+
+  "2":
+    mats: GOLD_INGOT
+    name: "<gradient:#FB7185:#F43F5E><bold>价格最高</bold></gradient>"
+    lore:
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>按价格从高到低排序</#F8FAFC>"
+    click:
+      - "internal: select_sort"
+
+  "3":
+    mats: REDSTONE_TORCH
+    name: "<gradient:#C084FC:#F9A8D4><bold>即将到期</bold></gradient>"
+    lore:
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>优先显示即将到期的商品</#F8FAFC>"
+    click:
+      - "internal: select_sort"

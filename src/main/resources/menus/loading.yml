@@ -1,0 +1,24 @@
+Title: "<gradient:#58A6FF:#F778BA><bold>全球市场</bold></gradient>"
+
+Shape:
+  - "BBBBBBBBB"
+  - "BBBBBBBBB"
+  - "BBBB`加载中`BBBB"
+  - "BBBBBBBBB"
+  - "BBBBBBBBB"
+  - "BBBBBBBBB"
+
+BUTTONS:
+  "B":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+  "加载中":
+    mats: CLOCK
+    glow: true
+    name: "<gradient:#67E8F9:#FACC15><bold>载入市场数据中</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>正在异步拉取数据与构建菜单</#E2E8F0>"
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>不会在主线程执行 IO</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>请稍候...</#F8FAFC>"

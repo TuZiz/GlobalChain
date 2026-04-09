@@ -1,0 +1,98 @@
+Title: "<gradient:#43E97B:#38F9D7><bold>✦ 上架确认 ✦</bold></gradient>"
+
+Shape:
+  - "E#G#I#$M#"
+  - "#########"
+  - "####V####"
+  - "###P#Y###"
+  - "#########"
+  - "<####C###"
+
+BUTTONS:
+  "#":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  "E":
+    mats: SUNFLOWER
+    name: "<gradient:#FACC15:#FB923C><bold>✦ 重新读取主手 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#FACC15>▶</#FACC15> <#F8FAFC>点击刷新当前主手预览</#F8FAFC>"
+    click:
+      - "internal: open_sell_confirm"
+
+  "G":
+    mats: COMPASS
+    name: "<gradient:#67E8F9:#58A6FF><bold>✦ 全服市场 ✦</bold></gradient>"
+    click:
+      - "internal: open_global"
+
+  "M":
+    mats: CHEST
+    name: "<gradient:#FACC15:#FB7185><bold>✦ 我的在售 ✦</bold></gradient>"
+    click:
+      - "internal: open_mine"
+
+  "$":
+    mats: GOLD_INGOT
+    name: "<gradient:#FACC15:#FDE68A><bold>✦ 钱包余额 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前余额：<#FDE047><balance></#FDE047></#E2E8F0>"
+
+  "I":
+    mats: WRITABLE_BOOK
+    name: "<gradient:#E2E8F0:#F8FAFC><bold>✦ 上架信息 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前价格：<#FACC15><price></#FACC15></#E2E8F0>"
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>单件价格：<#FACC15><retailprice></#FACC15></#E2E8F0>"
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>手续费：<#FB7185><fee></#FB7185></#E2E8F0>"
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>预计到账：<#4ADE80><payout></#4ADE80></#E2E8F0>"
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>到期时间：<#A5F3FC><expiretime></#A5F3FC></#E2E8F0>"
+
+  "<":
+    mats: ARROW
+    name: "<gradient:#67E8F9:#A5F3FC><bold>« 返回列表</bold></gradient>"
+    click:
+      - "internal: back_to_source"
+
+  "C":
+    mats: OAK_DOOR
+    name: "<gradient:#94A3B8:#CBD5E1><bold>✦ 关闭界面 ✦</bold></gradient>"
+    click:
+      - "close"
+
+  "V":
+    dynamic-role: "sell-draft-preview"
+    lore:
+      - ""
+      - " <#38BDF8>▍ </#38BDF8><#F8FAFC><bold>商品信息</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品类型：<#A5F3FC><type></#A5F3FC></#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品数量：<#86EFAC><amount></#86EFAC></#E2E8F0>"
+      - ""
+      - " <#4ADE80>▶</#4ADE80> <#F8FAFC>确认前请检查主手物品是否仍然一致</#F8FAFC>"
+
+  "P":
+    mats: NAME_TAG
+    name: "<gradient:#38BDF8:#A5F3FC><bold>✦ 设置价格 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前价格：<#FACC15><price></#FACC15></#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击在聊天栏输入价格</#F8FAFC>"
+    click:
+      - "internal: prompt_sell_confirm_price"
+
+  "Y":
+    mats: EMERALD
+    glow: true
+    name: "<gradient:#43E97B:#38F9D7><bold>✦ 确认上架 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>确认后会校验当前主手物品是否与预览一致</#E2E8F0>"
+      - ""
+      - " <#4ADE80>▶</#4ADE80> <#F8FAFC>点击提交上架</#F8FAFC>"
+    click:
+      - "internal: confirm_sell"

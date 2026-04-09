@@ -1,0 +1,291 @@
+Title: "<gradient:#58A6FF:#43E97B><bold>✦ 全球市场 ✦</bold></gradient>"
+
+Shape:
+  - "E#MFIR#$T"
+  - "#XXXXXXX#"
+  - "#XXXXXXX#"
+  - "#XXXXXXX#"
+  - "#XXXXXXX#"
+  - "<#SBC###>"
+BUTTONS:
+  "#":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  "G":
+    mats: COMPASS
+    glow: true
+    name: "<gradient:#67E8F9:#58A6FF><bold>✦ 全服市场 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>浏览跨服同步的全服交易列表</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>当前所在页签</#F8FAFC>"
+    click:
+      - "internal: open_global"
+
+  "M":
+    mats: CHEST
+    name: "<gradient:#FACC15:#FB7185><bold>✦ 我的在售 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>查看并管理自己的上架商品</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换</#F8FAFC>"
+    click:
+      - "menu: market-mine"
+
+  "B":
+    mats: ENDER_CHEST
+    name: "<gradient:#C084FC:#F9A8D4><bold>✦ 待领取箱 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>领取购买、下架或过期返还的物品</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换</#F8FAFC>"
+    click:
+      - "menu: market-mailbox"
+
+  "E":
+    mats: SUNFLOWER
+    name: "<gradient:#FACC15:#FB923C><bold>✦ 刷新列表 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>重新读取最新市场状态</#E2E8F0>"
+      - ""
+      - " <#FACC15>▶</#FACC15> <#F8FAFC>点击刷新数据</#F8FAFC>"
+    click:
+      - "internal: refresh"
+
+  "S":
+    mats: EMERALD
+    glow: true
+    name: "<gradient:#43E97B:#38F9D7><bold>✦ 出售物品 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>进入确认页设置价格并完成上架</#E2E8F0>"
+      - ""
+      - " <#4ADE80>▶</#4ADE80> <#F8FAFC>点击进入上架确认页</#F8FAFC>"
+    click:
+      - "internal: open_sell_confirm"
+
+  "$":
+    mats: GOLD_INGOT
+    name: "<gradient:#FACC15:#FDE68A><bold>✦ 钱包余额 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前余额：<#FDE047><balance></#FDE047></#E2E8F0>"
+
+  "C":
+    mats: OAK_DOOR
+    name: "<gradient:#94A3B8:#CBD5E1><bold>✦ 关闭界面 ✦</bold></gradient>"
+    click:
+      - "close"
+
+  "X":
+    dynamic-role: "listing-entry"
+    lore:
+      - ""
+      - " <#38BDF8>▍ </#38BDF8><#F8FAFC><bold>商品信息</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商家名称：<#FDE047><player></#FDE047>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品类型：<#A5F3FC><type></#A5F3FC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品数量：<#86EFAC><amount></#86EFAC> <#94A3B8>个</#94A3B8>"
+      - ""
+      - " <#FACC15>▍ </#FACC15><#F8FAFC><bold>交易详情</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品总价：<#FACC15><price> <symbol></#FACC15>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>单件零售：<#FACC15><retailprice> <symbol></#FACC15>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>支付方式：<#E2E8F0><currency></#E2E8F0>"
+      - ""
+      - " <#C084FC>▍ </#C084FC><#F8FAFC><bold>状态记录</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>上市时间：<#CBD5E1><uploadTime></#CBD5E1>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>到期时间：<#F87171><expireTime></#F87171>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>剩余时间：<#F472B6><expireTimeLeft></#F472B6>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品编号：<#64748B><id></#64748B>"
+      - ""
+      - " <#4ADE80>▶</#4ADE80> <#F8FAFC>点击购买该物品</#F8FAFC>"
+    click:
+      - "internal: buy_entry"
+
+  "T":
+    mats: BOOK
+    name: "<gradient:#67E8F9:#A5F3FC><bold>✦ 分类目录 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前分类：<#F472B6><filter></#F472B6></#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击进入分类子页面</#F8FAFC>"
+    click:
+      - "internal: open_filter_menu"
+
+  "<":
+    mats: ARROW
+    name: "<gradient:#67E8F9:#A5F3FC><bold>« 上一页</bold></gradient>"
+    click:
+      - "internal: prev_page"
+
+  "I":
+    mats: OAK_SIGN
+    name: "<gradient:#E2E8F0:#F8FAFC><bold>✦ 市场总览 ✦</bold></gradient>"
+    lore:
+      - " <#38BDF8>▍ </#38BDF8><#F8FAFC><bold>当前看板</bold></#F8FAFC>"
+      - ""
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>当前页数：<#A5F3FC><page></#A5F3FC> / <#A5F3FC><pages></#A5F3FC></#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>商品总数：<#FDE047><total></#FDE047></#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>搜索词条：<#86EFAC><search></#86EFAC></#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>当前分类：<#F472B6><filter></#F472B6></#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>当前排序：<#FACC15><sort></#FACC15></#E2E8F0>"
+      - ""
+      - " <#4ADE80>▍ </#4ADE80><#F8FAFC><bold>交易规则</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>购买成功后，物品会先进入待领取箱</#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>分类筛选使用独立子页面，不会在当前页循环切换</#E2E8F0>"
+
+  ">":
+    mats: ARROW
+    name: "<gradient:#67E8F9:#A5F3FC><bold>下一页 »</bold></gradient>"
+    click:
+      - "internal: next_page"
+
+  "F":
+    mats: NAME_TAG
+    name: "<gradient:#38BDF8:#A5F3FC><bold>✦ 搜索物品 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前关键词：<#A5F3FC><search></#A5F3FC></#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击输入新关键词</#F8FAFC>"
+    click:
+      - "internal: prompt_search"
+
+  "R":
+    mats: HOPPER
+    name: "<gradient:#F59E0B:#FDE68A><bold>✦ 排序目录 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前排序：<#FACC15><sort></#FACC15></#E2E8F0>"
+      - ""
+      - " <#F59E0B>▶</#F59E0B> <#F8FAFC>点击进入排序子页面</#F8FAFC>"
+    click:
+      - "internal: open_sort_menu"
+
+  "K":
+    mats: WRITABLE_BOOK
+    name: "<gradient:#E2E8F0:#F8FAFC><bold>✦ 市场说明 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#4ADE80>▍ </#4ADE80><#F8FAFC><bold>交易规则</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>购买成功后，物品会先进入待领取箱</#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>分类筛选已改为独立子页面，不会在当前页循环切换</#E2E8F0>"
+
+  "全部":
+    mats: COMPASS
+    glow: true
+    default-filter: true
+    name: "<gradient:#67E8F9:#A5F3FC><bold>全部商品</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>浏览市场中的全部在售商品</#E2E8F0>"
+    filter-prefixes: []
+
+  "建材":
+    mats: GRASS_BLOCK
+    name: "<gradient:#4ADE80:#86EFAC><bold>建筑材料</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>石头、木头、玻璃、砖块与大多数建筑材料</#E2E8F0>"
+    filter-prefixes:
+      - "minecraft:stone"
+      - "minecraft:deepslate"
+      - "minecraft:dirt"
+      - "minecraft:grass"
+      - "minecraft:sand"
+      - "minecraft:terracotta"
+      - "minecraft:glass"
+      - "minecraft:log"
+      - "minecraft:planks"
+      - "minecraft:wool"
+      - "minecraft:concrete"
+      - "minecraft:bricks"
+      - "minecraft:slab"
+      - "minecraft:stairs"
+
+  "战斗":
+    mats: DIAMOND_SWORD
+    name: "<gradient:#FB7185:#F43F5E><bold>战斗装备</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>武器、护甲、弓弩、盾牌与作战装备</#E2E8F0>"
+    filter-prefixes:
+      - "minecraft:sword"
+      - "minecraft:axe"
+      - "minecraft:bow"
+      - "minecraft:crossbow"
+      - "minecraft:trident"
+      - "minecraft:shield"
+      - "minecraft:helmet"
+      - "minecraft:chestplate"
+      - "minecraft:leggings"
+      - "minecraft:boots"
+
+  "工具":
+    mats: DIAMOND_PICKAXE
+    name: "<gradient:#F59E0B:#FDE68A><bold>实用工具</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>工具、桶、钓竿与功能性实用物品</#E2E8F0>"
+    filter-prefixes:
+      - "minecraft:pickaxe"
+      - "minecraft:shovel"
+      - "minecraft:hoe"
+      - "minecraft:bucket"
+      - "minecraft:fishing_rod"
+      - "minecraft:shears"
+      - "minecraft:flint_and_steel"
+
+  "食物":
+    mats: GOLDEN_CARROT
+    name: "<gradient:#FACC15:#FDE047><bold>食物补给</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>食物、补给、药水原料与日常消耗物资</#E2E8F0>"
+    filter-prefixes:
+      - "minecraft:apple"
+      - "minecraft:bread"
+      - "minecraft:carrot"
+      - "minecraft:potato"
+      - "minecraft:beef"
+      - "minecraft:chicken"
+      - "minecraft:porkchop"
+      - "minecraft:cod"
+      - "minecraft:salmon"
+      - "minecraft:golden_carrot"
+
+  "红石":
+    mats: REDSTONE
+    name: "<gradient:#EF4444:#F87171><bold>红石机械</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>红石线路、自动化组件与机关部件</#E2E8F0>"
+    filter-prefixes:
+      - "minecraft:redstone"
+      - "minecraft:observer"
+      - "minecraft:repeater"
+      - "minecraft:comparator"
+      - "minecraft:hopper"
+      - "minecraft:piston"
+      - "minecraft:dispenser"
+      - "minecraft:dropper"
+
+  "稀有":
+    mats: NETHER_STAR
+    name: "<gradient:#C084FC:#E879F9><bold>稀有物资</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>高价值、稀有与终局阶段的重要物资</#E2E8F0>"
+    filter-prefixes:
+      - "minecraft:elytra"
+      - "minecraft:netherite"
+      - "minecraft:totem"
+      - "minecraft:shulker_box"
+      - "minecraft:nether_star"
+      - "minecraft:beacon"
+      - "minecraft:enchanted_golden_apple"

@@ -1,0 +1,139 @@
+Title: "<gradient:#C084FC:#F9A8D4><bold>✦ 待领取箱 ✦</bold></gradient>"
+
+Shape:
+  - "E#G#I##$M"
+  - "#XXXXXXX#"
+  - "#XXXXXXX#"
+  - "#XXXXXXX#"
+  - "#XXXXXXX#"
+  - "<#SBC###>"
+
+BUTTONS:
+  "#":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  "G":
+    mats: COMPASS
+    name: "<gradient:#67E8F9:#58A6FF><bold>✦ 全服市场 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>浏览跨节点同步的全服交易列表</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换</#F8FAFC>"
+    click:
+      - "menu: market-global"
+
+  "M":
+    mats: CHEST
+    name: "<gradient:#FACC15:#FB7185><bold>✦ 我的在售 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>查看并管理自己的上架物品</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换</#F8FAFC>"
+    click:
+      - "menu: market-mine"
+
+  "B":
+    mats: ENDER_CHEST
+    glow: true
+    name: "<gradient:#C084FC:#F9A8D4><bold>✦ 待领取箱 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>查看购买成功或下架返还的物品</#E2E8F0>"
+      - ""
+      - " <#C084FC>▶</#C084FC> <#F8FAFC>当前所在页签</#F8FAFC>"
+    click:
+      - "internal: open_mailbox"
+
+  "E":
+    mats: SUNFLOWER
+    name: "<gradient:#FACC15:#FB923C><bold>✦ 刷新邮箱 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>重新读取最新待领取记录</#E2E8F0>"
+      - ""
+      - " <#FACC15>▶</#FACC15> <#F8FAFC>点击刷新数据</#F8FAFC>"
+    click:
+      - "internal: refresh"
+
+  "S":
+    mats: EMERALD
+    glow: true
+    name: "<gradient:#43E97B:#38F9D7><bold>✦ 出售主手物品 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>进入确认页设置价格并完成上架</#E2E8F0>"
+      - ""
+      - " <#4ADE80>▶</#4ADE80> <#F8FAFC>点击进入上架确认页</#F8FAFC>"
+    click:
+      - "internal: open_sell_confirm"
+
+  "$":
+    mats: GOLD_INGOT
+    name: "<gradient:#FACC15:#FDE68A><bold>✦ 钱包余额 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前余额：<#FDE047><balance></#FDE047></#E2E8F0>"
+
+  "C":
+    mats: OAK_DOOR
+    name: "<gradient:#94A3B8:#CBD5E1><bold>✦ 关闭界面 ✦</bold></gradient>"
+    click:
+      - "close"
+
+  "X":
+    dynamic-role: "mailbox-entry"
+    lore:
+      - ""
+      - " <#38BDF8>▍ </#38BDF8><#F8FAFC><bold>待领取物品</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>物品数量：<#86EFAC><amount></#86EFAC> <#94A3B8>个</#94A3B8>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>领取编号：<#67E8F9><id></#67E8F9></#E2E8F0>"
+      - ""
+      - " <#4ADE80>▶</#4ADE80> <#F8FAFC>点击领取到背包</#F8FAFC>"
+    click:
+      - "internal: claim_entry"
+
+  "D":
+    mats: WRITABLE_BOOK
+    name: "<gradient:#E2E8F0:#F8FAFC><bold>✦ 领取说明 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#4ADE80>▍ </#4ADE80><#F8FAFC><bold>操作规则</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>点击任意物品即可尝试领取到背包</#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>若背包空间不足，领取事务会自动回滚</#E2E8F0>"
+
+  "<":
+    mats: ARROW
+    name: "<gradient:#67E8F9:#A5F3FC><bold>« 上一页</bold></gradient>"
+    click:
+      - "internal: prev_page"
+
+  "I":
+    mats: OAK_SIGN
+    name: "<gradient:#E2E8F0:#F8FAFC><bold>✦ 邮箱总览 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#38BDF8>▍ </#38BDF8><#F8FAFC><bold>当前看板</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>当前页数：<#A5F3FC><page></#A5F3FC> / <#A5F3FC><pages></#A5F3FC></#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>待领总数：<#FDE047><total></#FDE047></#E2E8F0>"
+      - ""
+      - " <#C084FC>▍ </#C084FC><#F8FAFC><bold>系统机制</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>购买成功、下架返还、过期退回都会进入这里</#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>若背包空间不足，领取事务会自动回滚</#E2E8F0>"
+
+  ">":
+    mats: ARROW
+    name: "<gradient:#67E8F9:#A5F3FC><bold>下一页 »</bold></gradient>"
+    click:
+      - "internal: next_page"
+
+  "K":
+    mats: CHEST
+    name: "<gradient:#67E8F9:#C084FC><bold>✦ 邮箱说明 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#C084FC>▍ </#C084FC><#F8FAFC><bold>系统机制</bold></#F8FAFC>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>购买成功、下架返还、过期退回都会进入这里</#E2E8F0>"
+      - "   <#94A3B8>▪</#94A3B8> <#E2E8F0>数据已跨服持久化，不依赖当前节点在线</#E2E8F0>"

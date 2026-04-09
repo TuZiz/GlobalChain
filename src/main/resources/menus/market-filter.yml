@@ -1,0 +1,226 @@
+Title: "<gradient:#67E8F9:#A78BFA><bold>✦ 分类目录 ✦</bold></gradient>"
+
+Shape:
+  - "E#G#I##$M"
+  - "#########"
+  - "#0#1#2#3#"
+  - "##4#5#6##"
+  - "#########"
+  - "<#SBC####"
+
+BUTTONS:
+  "#":
+    mats: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  "E":
+    mats: SUNFLOWER
+    name: "<gradient:#FACC15:#FB923C><bold>✦ 刷新列表 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>重新读取当前分类目录状态</#E2E8F0>"
+      - ""
+      - " <#FACC15>▶</#FACC15> <#F8FAFC>点击刷新数据</#F8FAFC>"
+    click:
+      - "internal: refresh"
+
+  "G":
+    mats: COMPASS
+    name: "<gradient:#67E8F9:#58A6FF><bold>✦ 全服市场 ✦</bold></gradient>"
+    click:
+      - "internal: open_global"
+
+  "M":
+    mats: CHEST
+    name: "<gradient:#FACC15:#FB7185><bold>✦ 我的在售 ✦</bold></gradient>"
+    click:
+      - "internal: open_mine"
+
+  "B":
+    mats: ENDER_CHEST
+    name: "<gradient:#C084FC:#F9A8D4><bold>✦ 待领取箱 ✦</bold></gradient>"
+    click:
+      - "internal: open_mailbox"
+
+  "S":
+    mats: EMERALD
+    glow: true
+    name: "<gradient:#43E97B:#38F9D7><bold>✦ 出售主手物品 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#4ADE80>▶</#4ADE80> <#F8FAFC>点击进入上架确认页</#F8FAFC>"
+    click:
+      - "internal: open_sell_confirm"
+
+  "C":
+    mats: OAK_DOOR
+    name: "<gradient:#94A3B8:#CBD5E1><bold>✦ 返回主市场 ✦</bold></gradient>"
+    click:
+      - "menu: market-global"
+
+  "<":
+    mats: ARROW
+    name: "<gradient:#67E8F9:#A5F3FC><bold>« 返回主市场</bold></gradient>"
+    lore:
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>返回全球市场主页</#F8FAFC>"
+    click:
+      - "menu: market-global"
+
+  "I":
+    mats: WRITABLE_BOOK
+    name: "<gradient:#E2E8F0:#F8FAFC><bold>✦ 分类说明 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前分类：<#F472B6><filter></#F472B6></#E2E8F0>"
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>点击任意分类后会直接返回市场列表</#E2E8F0>"
+
+  "$":
+    mats: GOLD_INGOT
+    name: "<gradient:#FACC15:#FDE68A><bold>✦ 钱包余额 ✦</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>当前余额：<#FDE047><balance></#FDE047></#E2E8F0>"
+
+  # =================[ 分类映射开始 ]=================
+
+  "0":
+    mats: COMPASS
+    glow: true
+    default-filter: true
+    name: "<gradient:#67E8F9:#A5F3FC><bold>全部商品</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>浏览全部在售商品</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换并返回市场</#F8FAFC>"
+    click:
+      - "internal: select_filter"
+
+  "1":
+    mats: GRASS_BLOCK
+    name: "<gradient:#4ADE80:#86EFAC><bold>建筑材料</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>石头、木头、玻璃、砖块与大多数建筑材料</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换并返回市场</#F8FAFC>"
+    click:
+      - "internal: select_filter"
+    filter-prefixes:
+      - "minecraft:stone"
+      - "minecraft:deepslate"
+      - "minecraft:dirt"
+      - "minecraft:grass"
+      - "minecraft:sand"
+      - "minecraft:terracotta"
+      - "minecraft:glass"
+      - "minecraft:log"
+      - "minecraft:planks"
+      - "minecraft:wool"
+      - "minecraft:concrete"
+      - "minecraft:bricks"
+      - "minecraft:slab"
+      - "minecraft:stairs"
+
+  "2":
+    mats: DIAMOND_SWORD
+    name: "<gradient:#FB7185:#F43F5E><bold>战斗装备</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>武器、护甲、弓弩、盾牌与作战装备</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换并返回市场</#F8FAFC>"
+    click:
+      - "internal: select_filter"
+    filter-prefixes:
+      - "minecraft:sword"
+      - "minecraft:axe"
+      - "minecraft:bow"
+      - "minecraft:crossbow"
+      - "minecraft:trident"
+      - "minecraft:shield"
+      - "minecraft:helmet"
+      - "minecraft:chestplate"
+      - "minecraft:leggings"
+      - "minecraft:boots"
+
+  "3":
+    mats: DIAMOND_PICKAXE
+    name: "<gradient:#F59E0B:#FDE68A><bold>实用工具</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>工具、桶、钓竿与功能性实用物品</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换并返回市场</#F8FAFC>"
+    click:
+      - "internal: select_filter"
+    filter-prefixes:
+      - "minecraft:pickaxe"
+      - "minecraft:shovel"
+      - "minecraft:hoe"
+      - "minecraft:bucket"
+      - "minecraft:fishing_rod"
+      - "minecraft:shears"
+      - "minecraft:flint_and_steel"
+
+  "4":
+    mats: GOLDEN_CARROT
+    name: "<gradient:#FACC15:#FDE047><bold>食物补给</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>食物、补给、药水原料与日常消耗物资</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换并返回市场</#F8FAFC>"
+    click:
+      - "internal: select_filter"
+    filter-prefixes:
+      - "minecraft:apple"
+      - "minecraft:bread"
+      - "minecraft:carrot"
+      - "minecraft:potato"
+      - "minecraft:beef"
+      - "minecraft:chicken"
+      - "minecraft:porkchop"
+      - "minecraft:cod"
+      - "minecraft:salmon"
+      - "minecraft:golden_carrot"
+
+  "5":
+    mats: REDSTONE
+    name: "<gradient:#EF4444:#F87171><bold>红石机械</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>红石线路、自动化组件与机关部件</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换并返回市场</#F8FAFC>"
+    click:
+      - "internal: select_filter"
+    filter-prefixes:
+      - "minecraft:redstone"
+      - "minecraft:observer"
+      - "minecraft:repeater"
+      - "minecraft:comparator"
+      - "minecraft:hopper"
+      - "minecraft:piston"
+      - "minecraft:dispenser"
+      - "minecraft:dropper"
+
+  "6":
+    mats: NETHER_STAR
+    name: "<gradient:#C084FC:#E879F9><bold>稀有物资</bold></gradient>"
+    lore:
+      - ""
+      - " <#94A3B8>▪</#94A3B8> <#E2E8F0>高价值、稀有与终局阶段的重要物资</#E2E8F0>"
+      - ""
+      - " <#38BDF8>▶</#38BDF8> <#F8FAFC>点击切换并返回市场</#F8FAFC>"
+    click:
+      - "internal: select_filter"
+    filter-prefixes:
+      - "minecraft:elytra"
+      - "minecraft:netherite"
+      - "minecraft:totem"
+      - "minecraft:shulker_box"
+      - "minecraft:nether_star"
+      - "minecraft:beacon"
+      - "minecraft:enchanted_golden_apple"

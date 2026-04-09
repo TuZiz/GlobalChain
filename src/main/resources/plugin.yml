@@ -1,0 +1,19 @@
+name: GlobalChain
+version: '$version'
+main: ym.globalchain.GlobalChain
+api-version: '1.21'
+folia-supported: true
+load: POSTWORLD
+depend: [Vault]
+
+authors: [ymxc]
+commands:
+  gmarket:
+    aliases: [gc, market, globalchain]
+    description: Cross-server global market command.
+    usage: /gmarket help
+permissions:
+  globalchain.use:
+    default: true
+  globalchain.admin:
+    default: op
